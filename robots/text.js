@@ -7,7 +7,7 @@ async function robot(content) {
     sanitizeContent(content)
     breakContentIntoSentences(content)
 
-   async function fetchContentFromWikipidia(content) {
+    async function fetchContentFromWikipidia(content) {
     
     const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey)
     const wikipediaAlgorithm = algorithmiaAuthenticated.algo('web/WikipediaParser/0.1.2')
@@ -38,6 +38,7 @@ async function robot(content) {
     }
 
     function removeDatesInParentheses(text) {
+        //console.log("  ")
         return text.replace(/\((?:\([^()]*\)|[^()])*\)/gm, '').replace(/  /g,' ')
     }
 

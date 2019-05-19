@@ -1,32 +1,12 @@
 const readline = require('readline-sync')
 const robots = {
-    text: require('./robots/text.js')
+    // text: require('./robots/text.js'),
+    // imdb: require('./robots/get-imdb.js')
+    // twiter: require(./robots/get-twiter-trends.js)
+    // google: require(./robots/get-google-trends.js)
 }
 
 async function start() {
-    const content = {}
-    
-    //Termos de busca
-    content.serchTerm = askAndReturnSerchTerm()
-    content.prefix = askAndReturnPrefix()
-
-    await robots.text(content)
-
-    //Capturando o input do usuario
-    function askAndReturnSerchTerm() {
-        return readline.question('Term Example: ')
-    }
-
-    //Selecionando o prefixo para a busca
-    function askAndReturnPrefix() {
-        const prefixes = ['Who is', 'What is', 'The history of']
-        const selectedPrefixIndex = readline.keyInSelect(prefixes, "Choose one option: ")
-        const selectedPrefixText = prefixes[selectedPrefixIndex]
-        
-        return selectedPrefixText
-    }
-    console.log(content)
+    const keyWorlds = []
 }
 start()
-
-//npm install readline-sync

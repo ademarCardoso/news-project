@@ -10,7 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "algorithmia": "^0.3.10",
+    "cheerio": "^1.0.0-rc.3",
     "readline-sync": "^1.4.9",
-    "sbd": "^1.0.15"
+    "sbd": "^1.0.15",
+    "twitter": "^1.7.1"
   }
 }
